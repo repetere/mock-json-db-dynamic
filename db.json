@@ -1,0 +1,79 @@
+{
+	"test1": {
+		"header": {
+			"/:catchall*": {
+				"jsonx": {
+					"component": "header",
+					"children": "test1 header"
+				}
+			}
+		},
+		"root": {
+			"/test1": {
+				"jsonx": {
+					"component": "div",
+					"children": "test 1 body root"
+				},
+				"resources": {
+					"posts": "https://jsonplaceholder.typicode.com/posts",
+					"profile": {
+						"fetchPath": "https://jsonplaceholder.typicode.com/users/1",
+						"fetchOptions": {
+							"headers": {
+								"custom-header-one": "my header"
+							}
+						}
+					}
+				},
+				"pageData": [{
+						"tagName": "title",
+						"attributes": {
+						},
+						"innerHTML": "test 1 page"
+					},
+					{
+						"tagName": "meta",
+						"attributes": {
+							"name": "theme-color",
+							"content": "#8b2d40"
+						}
+					}
+				]
+			}
+		}
+  },
+  "test2": {
+		"root": {
+			"/test2": {
+				"jsonx": {
+					"component": "div",
+					"children": "test 2 body root"
+				},
+				"pageData": [{
+						"tagName": "title",
+						"attributes": {
+						},
+						"innerHTML": "test 2 page"
+					}
+				]
+			}
+		}
+  },
+  "test3": {
+		"root": {
+			"/test4": {
+				"jsonx": {
+					"component": "div",
+					"children": "test 4 body root"
+				},
+				"pageData": [{
+						"tagName": "title",
+						"attributes": {
+						},
+						"innerHTML": "test 4 page"
+					}
+				]
+			}
+		}
+	}
+}
